@@ -1,4 +1,9 @@
 .weatherCard {
   position: relative;
-  margin: 25% auto auto auto;
+  margin: 10% auto 10% auto;
+}
+
+p.weatherIcon {
+  font-size: 7em;
+  display: block;
 }
