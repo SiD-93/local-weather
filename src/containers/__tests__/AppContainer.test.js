@@ -1,9 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { mount } from 'enzyme';
 
 import AppContainer from '../AppContainer';
 
+const wrapper = mount(<AppContainer />);
+
+it('is defined', () => {
+  expect(wrapper).toBeDefined();
+});
+
 it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<AppContainer />, div);
+  mount(<AppContainer />);
 });
