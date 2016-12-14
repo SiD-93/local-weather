@@ -1,10 +1,16 @@
 import React from 'react';
 
-function WeatherIcon() {
-  let conditionId = 801; // random value; will later be passed as a prop.
+function WeatherIcon(props) {
   return (
-    <p className={`wi wi-owm-${conditionId} text-center weatherIcon`}></p>
+    <p className={`wi wi-owm-${props.weatherIconCode} text-center weatherIcon`}></p>
   )
 }
 
+WeatherIcon.propTypes = {
+  weatherIconCode: React.PropTypes.number.isRequired
+}
+
+WeatherIcon.defaultProps = {
+  weatherIconCode: 800
+}
 export default WeatherIcon;
