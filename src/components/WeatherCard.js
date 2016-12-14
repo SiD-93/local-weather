@@ -1,7 +1,5 @@
 import React from 'react';
 
-import '../styles/base.css';
-
 function WeatherCard() {
   let conditionId = 801; // random value; will later be passed as a prop.
   return (
