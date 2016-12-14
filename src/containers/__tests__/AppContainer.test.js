@@ -12,3 +12,11 @@ it('is defined', () => {
 it('renders without crashing', () => {
   mount(<AppContainer />);
 });
+
+it('is wrapped in a div with class = container', () => {
+  expect(wrapper.find('.container')).toHaveLength(1);
+});
+
+it('wraps the main content in a jumbotron', () => {
+  expect(wrapper.find('.jumbotron')).toHaveLength(1);
+});
