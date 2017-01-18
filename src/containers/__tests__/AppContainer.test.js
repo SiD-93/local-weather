@@ -10,7 +10,7 @@ it('is defined', () => {
 });
 
 it('renders without crashing', () => {
-  mount(<AppContainer />);
+  wrapper;
 });
 
 it('is wrapped in a div with class = container', () => {
