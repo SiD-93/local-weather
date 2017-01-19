@@ -6,11 +6,11 @@ import AppContainer from '../AppContainer';
 const wrapper = mount(<AppContainer />);
 
 it('is defined', () => {
-  expect(wrapper).toBeDefined();
+  expect(wrapper.instance()).toBeDefined();
 });
 
 it('renders without crashing', () => {
-  wrapper;
+  expect(wrapper.instance()).toBeInstanceOf(AppContainer);
 });
 
 it('is wrapped in a div with class = container', () => {
