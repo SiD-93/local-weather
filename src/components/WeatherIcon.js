@@ -1,7 +1,8 @@
 import React from 'react';
 
 function WeatherIcon(props) {
-  let timeOfDay = (new Date().getHours() > 19) ? 'night' : 'day';
+  let currentTime = new Date().getHours();
+  let timeOfDay = (currentTime >= 6 && currentTime < 19) ? 'day' : 'night';
   return (
     <p className={`wi wi-owm-${timeOfDay}-${props.weatherIconCode} text-center weatherIcon`}></p>
   )
