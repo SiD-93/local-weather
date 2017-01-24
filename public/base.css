@@ -7,3 +7,9 @@ p.weatherIcon {
   font-size: 7em;
   display: block;
 }
+
+a.toggle, a.toggle:hover {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
