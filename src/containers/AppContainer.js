@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import WeatherIcon from '../components/WeatherIcon';
 import Loading from '../components/Loading';
+import WeatherInfo from '../components/WeatherInfo';
 
 class AppContainer extends Component {
   constructor() {
@@ -37,7 +38,6 @@ class AppContainer extends Component {
   }
 
   handleLocation(coords) {
-    console.log(coords);
     this.setState({
       geoLocationEnabled: true,
       currentLatitude: coords.coords.latitude,
@@ -47,7 +47,7 @@ class AppContainer extends Component {
   }
 
   fetchWeather() {
-    fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${this.state.currentLatitude}&lon=${this.state.currentLongitude}&appid=1fe4d321cb3bb40e9bdb6b20303f7dcd`)
+    fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${this.state.currentLatitude}&lon=${this.state.currentLongitude}&appid=1fe4d321cb3bb40e9bdb6b20303f7dcd&units=metric`)
     .then(response => response.json())
     .then((data) => {
       this.setState({
@@ -68,7 +68,10 @@ class AppContainer extends Component {
         <div className='jumbotron weatherCard'>
         {
           (this.state.geoLocationEnabled)
-          ? <WeatherIcon weatherIconCode={this.state.weatherData.id}/>
+          ? <div>
+              <WeatherIcon weatherIconCode={this.state.weatherData.id}/>
+              <WeatherInfo {...this.state.weatherData} />
+            </div>
           : <Loading />
         }
         </div>
