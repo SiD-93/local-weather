@@ -2,8 +2,10 @@
   "name": "local-weather",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://sid-93.github.io/local-weather",
   "devDependencies": {
     "enzyme": "^2.6.0",
+    "gh-pages": "^0.12.0",
     "react-addons-test-utils": "^15.4.1",
     "react-scripts": "0.8.4"
   },
@@ -15,6 +17,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   }
 }
