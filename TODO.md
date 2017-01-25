@@ -1,0 +1,4 @@
+- [ ] The OpenWeatherMap API does not seem to work when hosted on GH pages {GH is HTTPS and OWM is HTTP}.
+  - [ ] Find an alternate API.
+  - [ ] Figure out a workaround.
+- [ ] If none of the above works, try to host it elsewhere (maybe surge.sh).
