@@ -2,3 +2,4 @@
   - [ ] Find an alternate API.
   - [ ] Figure out a workaround.
 - [ ] If none of the above works, try to host it elsewhere (maybe surge.sh).
+- [ ] Foundations for a PWA (check bookmarks).
